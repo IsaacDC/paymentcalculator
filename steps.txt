@@ -1,0 +1,15 @@
+1. Get subtotal
+2. Calculate subtotal with tax
+3. Equals new total
+4. Add $25 fee
+5. Equals "Final Total"
+6. Calculate "Final Total" with %10 down-payment
+7. Equals down-payment
+8. "Final Total" - down payment
+9. Equals balance buyer has to pay after subtracting the down payment
+10. Divide by "amount of paycheck deductions"
+11. Equals "how much buyer pays PER paycheck" (drop everything after decimal point)
+12. Multiply "amount of paycheck deductions" by "how much buyer pays PER paycheck"
+13. Equals "new balance buyer has to pay"
+14. Subtract "new balance buyer has to pay" from "final total"
+15. Equals "new down payment"

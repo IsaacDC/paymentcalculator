@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PantherTech</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <h1>Payment Calculator</h1>
+    <ul>
+      <li>
+        <span>Sub-Total:</span>
+        <span>
+          <input id="subtotal" type="text" placeholder="0.00" >
+        </span>
+      </li>
+      <li>
+        <span>Tax(7%):</span>
+        <span id="tax">0</span>
+      </li>
+      <li>
+        <span>Fee:</span>
+        <span>25.00</span>
+      </li>
+      <li>
+        <span>Grand Total:</span>
+        <span id="grandtotal">0</span>
+      </li>
+    </ul>
+    <h2>Payments</h2>
+    <input id="payment" type="range" min="0" max="12" value=12>
+
+    <span id="v">Paychecks:</span>
+    <span id="value">0</span>
+    <span id="message">12</span>
+    <ul>
+      <li>
+        <span>Down Payment:</span>
+        <span id="downpayment">0</span>
+      </li>
+      <li>
+        <span>Per paycheck:</span>
+        <span id="monthly">??</span>
+      </li>
+    </ul>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

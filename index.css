@@ -1,0 +1,136 @@
+body {
+  background-color: #D1D8E0;
+}
+
+main {
+  font-family: Arial, Helvetica Neue, sans-serif;
+  background-color: #FFFFFF;
+  width: 400px;
+  /* height: 600px; */
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+main h1 {
+  color: #707070;
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 0px;
+}
+
+
+main input[type='text'] {
+  width: 70%;
+  height: 25px;
+  text-align: right;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-color: lightgray;
+  border-bottom-width: 1px;
+  color:black;
+  font-size: 20px;
+}
+
+main ul {
+  padding: 0px;
+}
+
+main ul li {
+  list-style: none;
+  font-size: 0px;
+}
+
+main ul li:nth-child(3) {
+  border-bottom: 1px solid black;
+  margin-bottom: 25px;
+}
+
+main ul li span {
+  font-size: 20px;
+  display: inline-block;
+  text-align: right;
+}
+
+main ul li span:first-child {
+  width: 40%;
+  margin-bottom: 10px;
+  color: #A5B1C2;
+}
+
+main ul li span:nth-child(2) {
+  width: 60%;
+  color: #707070;
+}
+
+main ul li span:nth-child(2)::before {
+  content: "$";
+  float: left;
+  padding-left: 30px;
+  color: #808080;
+}
+
+#payment {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-bottom: 10px;
+ }
+ #payment:hover{
+   opacity: 1;
+ }
+   #payment::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #A5B1C2;
+  cursor: pointer;
+ }
+
+p {
+  margin-top: 7px;
+  font-size: 20px;
+  color: #707070;
+}
+#v{
+  font-size: 18px;
+  float: left;
+  color: gray;
+}
+
+#message {
+  font-size: 14px;
+  float: right;
+  color: #A5B1C2;
+  font-style: italic;
+
+}
+
+#message::before{
+  content: "(Max payments allowed)"
+}
+
+main ul:nth-of-type(2) {
+  background-color: lightgray;
+  margin-top: 40px;
+  padding: 20px;
+  padding-left: 0px;
+  border-radius: 3px;
+}
+
+main ul:nth-of-type(2) li span:first-child {
+  font-size: 18px;
+  color: gray;
+  margin-bottom: 5px;
+}
