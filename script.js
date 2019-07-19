@@ -5,7 +5,6 @@ function isNumber(evt) {
   evt = (evt) ? evt : window.event;
   var charCode = (evt.which) ? evt.which : evt.keyCode;
 
-  console.log(charCode)
   if (charCode == 46  || ( 47 < charCode && charCode < 58)) {
     return true;
   }
@@ -22,6 +21,13 @@ function calculate_max_payments() {
   document.getElementById('tax').innerHTML = (subtotal * .07).toFixed(2)
   document.getElementById('grandtotal').innerHTML = (total).toFixed(2)
 
+  if (500 > total) {
+    document.getElementById('downpayment').innerHTML = 0;
+    document.getElementById('monthly').innerHTML = 0;
+    return;
+
+  }
+
   if (500 <= total && total < 1001) {
     maxPayments = 12;
   }
@@ -36,7 +42,6 @@ function calculate_max_payments() {
 
   if (3000 < total) {
     maxPayments = 20;
-    difference = total - 3000;
   }
 
   document.getElementById('message').innerHTML = maxPayments
@@ -50,12 +55,21 @@ function calculate_max_payments() {
 function payments() {
   var difference = 0;
   var num_of_payments = slider.value;
-  var downPayment = total * 0.1
+  var downPayment = (3000 - total) * 0.1
+  console.log("-----------------------------------------------");
+  console.log("total "+ total);
+  console.log("downPayment "+ downPayment);
   if (3000 < total) {
     difference = total - 3000;
     downPayment = downPayment + difference
   }
+  console.log("downPayment "+ downPayment);
+
   var newDownPayment = downPayment + ((total - downPayment) % num_of_payments)
+
+  console.log("difference "+difference);
+  console.log("downPayment "+downPayment);
+  console.log("newDownPayment "+newDownPayment);
 
   var payments = (total - newDownPayment) / num_of_payments
 
