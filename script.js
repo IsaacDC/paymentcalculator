@@ -76,7 +76,7 @@ function payments() {
   document.getElementById('value').innerHTML = num_of_payments;
 
   if (num_of_payments == 0) {
-    document.getElementById('downpayment').innerHTML = total;
+    document.getElementById('downpayment').innerHTML = total.toFixed(2);
     document.getElementById('monthly').innerHTML = 0;
     return;
   }
